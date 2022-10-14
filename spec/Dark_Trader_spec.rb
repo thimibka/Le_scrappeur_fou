@@ -1,31 +1,31 @@
+# require_relative ('../lib/Dark_Trader')
+
+# page = Nokogiri::HTML(URI.open("https://coinmarketcap.com/all/views/all/"))
+
+# describe 'Testing scraping with Crypto name' do
+#   it 'should return not nil if name-crypto is returned' do
+#     expect(liaison(page)).to_not be_nil
+#   end
+# end
+
 require_relative ('../lib/Dark_Trader')
 
-page = Nokogiri::HTML(URI.open("https://coinmarketcap.com/all/views/all/"))
+page = Nokogiri::HTML(URI.open('https://coinmarketcap.com/all/views/all/'))
 
-describe 'Testing scraping with Crypto name' do
-  it 'should return not nil if name-crypto is returned' do
-    expect(liaison(page)).to_not be_nil
+describe 'Testing scraping with Crypto Names' do
+  it 'Should return not nil if name-crypto is returned' do
+    expect(page).to include
   end
 end
 
-# require_relative ('../lib/dark_Trader.rb')
+describe 'Testing scraping with Crypto Values' do
+  it 'Should return not nil if values-crypto is returned' do
+    expect(page).to include
+  end
+end
 
-# page = Nokogiri::HTML(URI.open('https://coinmarketcap.com/all/views/all/'))
-
-# describe 'Testing scraping with Crypto Names' do
-#   it 'Should return not nil if name-crypto is returned' do
-#     expect(names_crypto(page)).to_not be_nil
-#   end
-# end
-
-# describe 'Testing scraping with Crypto Values' do
-#   it 'Should return not nil if values-crypto is returned' do
-#     expect(values_crypto(page)).to_not be_nil
-#   end
-# end
-
-# describe 'Testing final result' do
-#   it 'Should return not nil if Crypto_compare is working' do
-#     expect(crypto_compare(page)).to_not be_nil
-#   end
-# end
+describe 'Testing final result' do
+  it 'Should return not nil if Crypto_compare is working' do
+    expect(page).to include
+  end
+end

@@ -6,16 +6,16 @@ require 'open-uri'
 page = Nokogiri::HTML(URI.open("https://coinmarketcap.com/all/views/all/"))
 
 def crypto(link)
-  name =[]
-  link.xpath('/html/body/div[1]/div[1]/div[2]/div/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[2]/div/a[1]').each do |i| 
+    name =[]
+    link.xpath('/html/body/div[1]/div[1]/div[2]/div/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[2]/div/a[1]').each do |i| 
     name.push (i.text)                #extraction des noms de ville
   end
   return name
 end
 
 def valeur(link)
-  montant =[]
-  link.xpath('/html/body/div[1]/div[1]/div[2]/div/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[5]/div/a/span').each do |j|
+    montant =[]
+    link.xpath('/html/body/div[1]/div[1]/div[2]/div/div[1]/div/div[2]/div[3]/div/table/tbody/tr/td[5]/div/a/span').each do |j|
     montant.push (j.text)             #extraction des mails
   end
   return montant
