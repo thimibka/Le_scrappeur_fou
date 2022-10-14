@@ -8,7 +8,7 @@ describe 'Testing scraping with Crypto name' do
   end
 end
 
-# require_relative('../lib/00_dark_trader_scrap.rb')
+# require_relative ('../lib/dark_Trader.rb')
 
 # page = Nokogiri::HTML(URI.open('https://coinmarketcap.com/all/views/all/'))
 

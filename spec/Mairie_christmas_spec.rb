@@ -1,4 +1,4 @@
-require_relative('../lib/01_mairie_christmas')
+require_relative('../lib/Mairie_christmas.rb')
 
 url = 'http://www.annuaire-des-mairies.com/val-d-oise.html'
 
